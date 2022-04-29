@@ -207,6 +207,7 @@ namespace CapaPresentacion
             this.Controls.Add(this.menuTitulo);
             this.MainMenuStrip = this.menu;
             this.Name = "Inicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Ventas";
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
