@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
+using CapaEntidad;
+using CapaNegocio;
 
 namespace CapaPresentacion
 {
@@ -17,11 +20,21 @@ namespace CapaPresentacion
 
         private void brnIngresar_Click(object sender, EventArgs e)
         {
-            Inicio frmInicio = new Inicio();
-            frmInicio.Show();
-            this.Hide();
+            Usuario oUsuario =new CN_Usuario().Listar().Where(x => x.Documento == txtDocumento.Text && x.Clave == txtContraseña.Text).FirstOrDefault();
 
-            frmInicio.FormClosing += frm_closing;
+            if (oUsuario != null)
+            {
+                Inicio frmInicio = new Inicio();
+                frmInicio.Show();
+                this.Hide();
+
+                frmInicio.FormClosing += frm_closing;
+            }
+            else
+            {
+                MessageBox.Show("Usuario no encontrado", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            
 
 
         }
