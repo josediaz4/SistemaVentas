@@ -6,9 +6,9 @@ using CapaNegocio;
 
 namespace CapaPresentacion
 {
-    public partial class Login : Form
+    public partial class frmLogin : Form
     {
-        public Login()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace CapaPresentacion
 
             if (oUsuario != null)
             {
-                Inicio frmInicio = new Inicio();
+                Inicio frmInicio = new Inicio(oUsuario);
                 frmInicio.Show();
                 this.Hide();
 
