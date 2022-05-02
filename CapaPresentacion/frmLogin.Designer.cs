@@ -36,7 +36,7 @@ namespace CapaPresentacion
             this.txtDocumento = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.brnIngresar = new FontAwesome.Sharp.IconButton();
+            this.btnIngresar = new FontAwesome.Sharp.IconButton();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +83,7 @@ namespace CapaPresentacion
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(234, 23);
             this.txtContraseña.TabIndex = 2;
+            this.txtContraseña.Text = "123";
             // 
             // txtDocumento
             // 
@@ -91,6 +92,7 @@ namespace CapaPresentacion
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(234, 23);
             this.txtDocumento.TabIndex = 1;
+            this.txtDocumento.Text = "35806964";
             // 
             // label3
             // 
@@ -110,23 +112,23 @@ namespace CapaPresentacion
             this.label4.TabIndex = 6;
             this.label4.Text = "Contraseña:";
             // 
-            // brnIngresar
+            // btnIngresar
             // 
-            this.brnIngresar.BackColor = System.Drawing.Color.ForestGreen;
-            this.brnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.brnIngresar.ForeColor = System.Drawing.Color.White;
-            this.brnIngresar.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
-            this.brnIngresar.IconColor = System.Drawing.Color.White;
-            this.brnIngresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.brnIngresar.IconSize = 25;
-            this.brnIngresar.Location = new System.Drawing.Point(235, 141);
-            this.brnIngresar.Name = "brnIngresar";
-            this.brnIngresar.Size = new System.Drawing.Size(111, 39);
-            this.brnIngresar.TabIndex = 3;
-            this.brnIngresar.Text = "Ingresar";
-            this.brnIngresar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.brnIngresar.UseVisualStyleBackColor = false;
-            this.brnIngresar.Click += new System.EventHandler(this.brnIngresar_Click);
+            this.btnIngresar.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngresar.ForeColor = System.Drawing.Color.White;
+            this.btnIngresar.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            this.btnIngresar.IconColor = System.Drawing.Color.White;
+            this.btnIngresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnIngresar.IconSize = 25;
+            this.btnIngresar.Location = new System.Drawing.Point(235, 141);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(111, 39);
+            this.btnIngresar.TabIndex = 3;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnIngresar.UseVisualStyleBackColor = false;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // btnCancelar
             // 
@@ -146,14 +148,14 @@ namespace CapaPresentacion
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // Login
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(508, 207);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.brnIngresar);
+            this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtDocumento);
@@ -162,9 +164,10 @@ namespace CapaPresentacion
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Login";
+            this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -180,7 +183,7 @@ namespace CapaPresentacion
         private System.Windows.Forms.TextBox txtDocumento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private FontAwesome.Sharp.IconButton brnIngresar;
+        private FontAwesome.Sharp.IconButton btnIngresar;
         private FontAwesome.Sharp.IconButton btnCancelar;
     }
 }

@@ -18,7 +18,7 @@ namespace CapaPresentacion
             this.Close();
         }
 
-        private void brnIngresar_Click(object sender, EventArgs e)
+        private void btnIngresar_Click(object sender, EventArgs e)
         {
             Usuario oUsuario =new CN_Usuario().Listar().Where(x => x.Documento == txtDocumento.Text && x.Clave == txtContraseña.Text).FirstOrDefault();
 
@@ -42,6 +42,11 @@ namespace CapaPresentacion
         private void frm_closing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            btnIngresar.Focus();
         }
     }
 }
